@@ -1,0 +1,90 @@
+body.button_3_11 {
+  background-color: #042120;
+  padding: 200px;
+  --ease: cubic-bezier(.68, -.55, .265, 1.55);
+}
+
+.button {
+  padding: 0 24px;
+  background-color: #1A1919;
+  border-radius: calc(24px + 24px + 48px);
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  height: 48px;
+  padding-left: calc(48px + 18px);
+  position: relative;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.button:hover {
+  transition: all var(--ease) 0.5s;
+  background-color: #333232;
+}
+.button:hover .button__iconContainer {
+  transform: rotate(-45deg);
+  left: calc(100% - 48px);
+  transition: all var(--ease) 0.5s;
+}
+.button:hover .button__text {
+  transform: translateX(-48px);
+  transition: all var(--ease) 0.5s;
+  color: #CFEBEA;
+}
+.button:hover .button__wrapper {
+  transform: translateX(0);
+  transition: all var(--ease) 0.5s;
+}
+
+.button__text {
+  transition: all var(--ease) 0.5s;
+  font-family: "Be Vietnam", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: white;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.button__iconContainer {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #333232;
+  border: 1.5px solid #1A1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  transition: all var(--ease) 0.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.button__wrapper {
+  width: 110%;
+  height: 100%;
+  background-color: #333232;
+  border-radius: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(calc(-100% + 48px));
+  transition: all var(--ease) 0.5s;
+  z-index: -1;
+}
+
+.button__icon {
+  width: 18px;
+  height: auto;
+  pointer-events: none;
+}
